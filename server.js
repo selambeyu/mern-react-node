@@ -3,7 +3,9 @@ const app = express();
 const connectDB = require("./config/database");
 const path = require("path");
 
-// connectDB();
+app.get("/", (req, res) => {
+  res.send("the app is running");
+});
 
 if (process.env.NODE_ENV === "production") {
   // Set static folder
@@ -14,7 +16,7 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 // Main Routes
 app.use("/api/users", require("./routes/api/users"));
