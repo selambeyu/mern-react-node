@@ -3,6 +3,8 @@ const app = express();
 const connectDB = require("./config/database");
 const path = require("path");
 
+app.use(express.json({ extended: false }));
+
 app.get("/", (req, res) => {
   res.send("the app is running");
 });
