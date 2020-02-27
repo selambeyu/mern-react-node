@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "server": "nodemon server",
-    "client": "npm start --prefix client",
+    "client": "npm start --port 7000 --prefix client",
     "dev": "concurrently  \"npm run server\" \"npm run client \" "
   },
   "author": "melkam beyene",
